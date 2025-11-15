@@ -34,13 +34,31 @@ public class _01_StringMethods {
 
     // Given Strings s1 and s2, return the longer String
     public static String longerString(String s1, String s2) {
-        return null;
+        int SLength1 = 0;
+        int SLength2 = 0;
+        SLength1 = s1.length();
+        SLength2 = s2.length();
+        if(SLength1>SLength2) {
+        	return s1;
+        } else {
+        	return s2;
+        }
+    	
+        
     }
 
     // If String s contains the word "underscores", change all of the spaces
     // to underscores
     public static String formatSpaces(String s) {
-        return null;
+      
+        if(s.contains("underscores")) {
+        	
+            String replacedStr = s.replace(' ', '_');
+            return replacedStr;
+        	
+        } else {
+        return s;
+        }
     }
 
     // Return the name of the person whose LAST name would appear first if they
@@ -48,21 +66,51 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
-        return null;
+       
+         String[] words1 = s1.split(" ");
+         String[] words2 = s2.split(" ");
+         String[] words3 = s3.split(" ");
+         if(words1[1].charAt(1)<words2[1].charAt(1)) {
+        	 if(words1[1].charAt(0)<words3[1].charAt(0)) {
+        		 return s1;
+        	 } else {
+        		 return s3;
+        	 }
+         } else {
+         if(words3[1].charAt(0)<words2[1].charAt(0)) {
+        	 return s3;
+         } else {
+        	 return s2;
+         }
+         }
+         
+     
     }
 
     // Return the sum of all numerical digits in the String
     public static int numeralSum(String s) {
-        return 0;
+    	s.getBytes();
+    	int num = 0;
+    	char[] c = s.toCharArray();
+    	for(int i = 0; i<c.length; i++) {
+    	if(Character.isDigit(c[i])) {
+    		num+= Character.getNumericValue(c[i]);
+    	}
+    	}
+    	return num;
+    	
+        
+     
     }
 
     // Return the number of times String substring appears in String s
     public static int substringCount(String s, String substring) {
-        return 0;
+    	
     }
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
+    	Utilities.encrypt(s, key)
         return null;
     }
 
