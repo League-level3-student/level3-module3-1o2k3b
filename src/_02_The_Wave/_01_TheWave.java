@@ -20,7 +20,7 @@ public class _01_TheWave {
      */
     
     public static ArrayList<String> wave(String str) {
-        
+       wave%str.length();
         return null;
     }
 }
