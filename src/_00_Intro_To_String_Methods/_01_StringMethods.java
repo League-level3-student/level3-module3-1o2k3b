@@ -105,18 +105,20 @@ public class _01_StringMethods {
 
     // Return the number of times String substring appears in String s
     public static int substringCount(String s, String substring) {
-    	
+    	return 0;
     }
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
-    	Utilities.encrypt(s, key)
+    	
+    	Utilities.encrypt(s.getBytes(), (byte) key);
         return null;
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
     // cyphertext (encrypted text)
     public static String decrypt(String s, char key) {
+    	Utilities.decrypt(s, (byte) key);
         return null;
     }
 
